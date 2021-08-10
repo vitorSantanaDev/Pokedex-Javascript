@@ -1,0 +1,156 @@
+body {
+	background: #EFEFBB;
+	background: linear-gradient(180deg, #2DC7ED 0%, #538BF0 100%);
+	color: white;
+	margin: 0;
+	font-family: rubik;
+}
+
+.container {
+	padding: 40px;
+	margin: 0 auto;
+}
+
+h1 {
+	text-align: center;
+	font-size: 54px;
+}
+
+.pokedex {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	grid-gap: 20px;
+	padding-inline-start: 0;
+}
+
+.card {
+	list-style: none;
+	padding: 40px;
+	color: #222;
+	text-align: center;
+	border-radius: 20px;
+	position: relative;
+}
+
+.card::after {
+	content: "";
+  display: block;
+  width: 50%;
+  height: 45%;
+  border-radius: 100%;
+  background-color: #fff;
+  opacity: .7;
+  position: absolute;
+  top: 15%;
+  left: 25%;
+}
+
+.steel {
+	background: linear-gradient(0deg, rgba(142,197,252,1) 0%, rgba(224,195,252,1) 100%);
+}
+
+.fire {
+    background: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+    
+}
+
+.grass {
+
+    background: linear-gradient(160deg, #00e91f 0%, #80d0a7 100%);
+
+}
+
+.electric {
+    background: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
+
+}
+
+.water, .ice {
+	background: radial-gradient(circle, rgba(0,147,233,1) 0%, rgba(128,208,199,1) 100%);
+}
+
+.ground {
+    
+    background: linear-gradient(132deg, #735d04 0%, #0f4c40 100%);
+
+
+}
+
+.rock {
+    background: linear-gradient(62deg, #d8d8d8 0%, #362e2e 100%);
+}
+
+.fairy {
+    background: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+}
+
+.poison {
+	background: radial-gradient(circle, rgba(244,208,63,1) 0%, rgba(22,160,133,1) 100%);
+}
+
+.bug {
+    background: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+
+.dragon {
+	background-color: #97b3e6;
+}
+
+.psychic {
+    background: linear-gradient(147deg, #deff3c 0%, #ffb225 74%);
+}
+
+.flying {
+	background-color: #F5F5F5;
+}
+
+.fighting {
+    background: linear-gradient(62deg, #f76060 0%, #ff0000 100%);
+}
+
+.normal {
+    background: linear-gradient(62deg, #ff8989 0%, #d22d2d 100%);
+}
+
+.card:hover {
+	animation: bounce 0.5s linear;
+}
+
+.card-title {
+	text-transform: capitalize;
+	margin-bottom: 0px;
+	font-size: 32px;
+	font-weight: normal;
+	position: relative;
+	z-index: 2;
+}
+
+.card-subtitle {
+	margin-top: 5px;
+	color: rgb(20, 20, 20);
+	font-weight: lighter;
+	position: relative;
+	z-index: 2;
+}
+
+.card-image {
+	height: 180px;
+	position: relative;
+	z-index: 2;
+}
+
+@keyframes bounce {
+	20% {
+			transform: translateY(-6px);
+	}
+	40% {
+			transform: translateY(0px);
+	}
+
+	80% {
+			transform: translateY(-2px);
+	}
+	100% {
+			transform: translateY(0);
+	}
+}
